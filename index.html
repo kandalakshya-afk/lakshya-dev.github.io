@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lakshya | Frontend Web Developer Portfolio</title>
+    <title>Lakshya | Frontend Web Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <meta name="description" content="Lakshya is a frontend web developer building responsive websites using HTML, CSS and JavaScript.">
+    <meta name="description" content="Lakshya is a frontend web developer building clean, responsive websites using HTML, CSS, and JavaScript.">
     <meta name="author" content="Lakshya">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Lakshya | Frontend Web Developer">
-    <meta property="og:description" content="Clean, responsive websites using HTML & CSS.">
+    <meta property="og:description" content="Clean and responsive websites using HTML & CSS.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kandalakshya-afk.github.io/lakshya-dev.github.io/">
     <meta property="og:image" content="preview.png">
@@ -23,23 +23,23 @@
 
 <!-- HERO -->
 <section class="hero">
-    <div class="container">
-        <h1>Hi, I'm <span id="typing"></span> 👋</h1>
-        <p class="tagline">Student | Future Developer | Creator</p>
+    <div class="hero-box">
+        <h1>Hi, I’m <span class="accent">Lakshya</span> 👋</h1>
+        <p class="tagline">Frontend Developer • Student • Creator</p>
 
-        <a href="#contact" class="primary-btn">Contact Me</a>
-        <a href="about.html" class="secondary-btn">About Me</a>
-        <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
-
-        <a href="Lakshya_Resume.pdf" class="resume-btn" download>
-            📄 Download Resume
-        </a>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn primary">Contact Me</a>
+            <a href="about.html" class="btn outline">About Me</a>
+            <a href="Lakshya_Resume.pdf" class="btn resume" download>Download Resume</a>
+        </div>
     </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact-section">
-    <form action="https://formspree.io/f/xzbldqny" method="POST" class="contact-form">
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+
+    <form action="https://formspree.io/f/xzbldqny" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" required></textarea>
@@ -51,48 +51,30 @@
 <section class="projects">
     <h2>My Projects</h2>
 
-    <div class="project-cards">
+    <div class="project-grid">
         <div class="card">
             <h3>Personal Portfolio</h3>
-            <p>A responsive portfolio website built using HTML & CSS.</p>
+            <p>Modern responsive portfolio built with HTML & CSS.</p>
         </div>
 
         <div class="card">
             <h3>Multi-Page Website</h3>
-            <p>Website with navigation, animations and contact form.</p>
+            <p>Website with navigation, animations, and contact form.</p>
         </div>
 
         <div class="card">
             <h3>Upcoming Project</h3>
-            <p>More cool projects coming soon 🚀</p>
+            <p>More projects coming soon 🚀</p>
         </div>
     </div>
 </section>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/918290176851" class="whatsapp-float" target="_blank">💬</a>
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp" target="_blank">💬</a>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <p>© 2026 Lakshya. Built with ❤️ using HTML & CSS.</p>
+<footer>
+    © 2026 Lakshya • Built with HTML & CSS
 </footer>
-
-<!-- JS -->
-<script>
-    const text = "Lakshya";
-    let index = 0;
-    function typeEffect() {
-        if (index < text.length) {
-            document.getElementById("typing").textContent += text.charAt(index);
-            index++;
-            setTimeout(typeEffect, 120);
-        }
-    }
-    window.onload = typeEffect;
-
-    const toggleBtn = document.getElementById("themeToggle");
-    toggleBtn.onclick = () => document.body.classList.toggle("light");
-</script>
 
 </body>
 </html>
