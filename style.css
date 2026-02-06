@@ -1,38 +1,16 @@
-html {
-    scroll-behavior: smooth;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
-
-/* ================= Animations ================= */
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* ================= Global ================= */
 
 body {
-    margin: 0;
     background-color: #0f172a;
-    font-family: Arial, sans-serif;
     color: white;
-    display: block;
-    animation: fadeIn 1.2s ease-in;
 }
 
-/* ================= Hero ================= */
-
+/* HERO */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -41,67 +19,66 @@ body {
 }
 
 .container {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;   /* 👈 THIS IS THE KEY FIX */
-    text-align: center;
+    align-items: center;
 }
-
 
 h1 {
     font-size: 48px;
 }
 
 .tagline {
-    font-size: 18px;
     color: #94a3b8;
-    margin-bottom: 30px;
+    margin: 15px 0 30px;
 }
 
-/* ================= Buttons ================= */
-
+/* BUTTONS */
 .primary-btn,
-.secondary-btn {
+.secondary-btn,
+.theme-btn,
+.resume-btn {
+    margin: 8px;
     padding: 12px 25px;
-    margin: 10px;
-    font-size: 16px;
     border-radius: 8px;
     text-decoration: none;
-    display: inline-block;
+    font-size: 16px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .primary-btn {
-    background-color: white;
+    background: white;
     color: black;
 }
 
 .secondary-btn {
-    background-color: transparent;
-    color: white;
     border: 2px solid white;
+    color: white;
 }
 
-.primary-btn:hover,
-.secondary-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+.theme-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
 }
 
-/* ================= Contact ================= */
+.resume-btn {
+    background: #38bdf8;
+    color: #020617;
+}
 
+/* CONTACT */
 .contact-section {
-    width: 100%;
     display: flex;
     justify-content: center;
-    margin: 100px 0;
+    margin: 80px 0;
 }
 
 .contact-form {
+    width: 320px;
     display: flex;
     flex-direction: column;
-    width: 320px;
 }
 
 .contact-form input,
@@ -110,170 +87,52 @@ h1 {
     padding: 10px;
     border-radius: 6px;
     border: none;
-    font-size: 14px;
-}
-
-.contact-form textarea {
-    resize: none;
-    height: 80px;
 }
 
 .contact-form button {
     margin-top: 10px;
-    background-color: #ff3366;
+    background: #ff3366;
     color: white;
     border: none;
     padding: 12px;
     border-radius: 8px;
-    cursor: pointer;
 }
 
-/* ================= Projects ================= */
-
+/* PROJECTS */
 .projects {
-    margin: 80px 0;
     text-align: center;
-}
-
-.projects h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+    margin: 80px 0;
 }
 
 .project-cards {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
-    background-color: #1e293b;
+    background: #1e293b;
     padding: 20px;
     width: 260px;
     border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-}
-
-/* ================= Responsive ================= */
-
-@media (max-width: 600px) {
-    h1 {
-        font-size: 32px;
-        text-align: center;
-    }
-
-    .tagline {
-        font-size: 14px;
-        text-align: center;
-    }
-
-    .project-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .primary-btn,
-    .secondary-btn {
-        width: 80%;
-        text-align: center;
-    }
-}
-section {
-    padding: 40px 20px;
-}
+/* FOOTER */
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: #020617;
     color: #94a3b8;
-    font-size: 14px;
-}
-/* ========== Light Mode ========== */
-
-body.light {
-    background-color: #f8fafc;
-    color: #020617;
 }
 
-body.light .tagline {
-    color: #475569;
-}
-
-body.light .card {
-    background-color: #e5e7eb;
-}
-
-body.light .footer {
-    background-color: #e5e7eb;
-    color: #020617;
-}
-
-.theme-btn {
-    margin-top: 20px;
-    background-color: transparent;
-    border: 2px solid currentColor;
-    color: inherit;
-}
-.services {
-    text-align: center;
-    margin: 80px 0;
-}
-
-.services h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-.service-cards {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.service-card {
-    background-color: #1e293b;
-    padding: 20px;
-    width: 260px;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-}
-.testimonials {
-    text-align: center;
-    margin: 80px 0;
-}
-
-.testimonial-cards {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.testimonial {
-    background-color: #1e293b;
-    padding: 20px;
-    width: 300px;
-    border-radius: 12px;
-    font-style: italic;
-}
+/* WHATSAPP */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
     width: 55px;
     height: 55px;
-    background-color: #25D366;
+    background: #25D366;
     color: white;
     font-size: 28px;
     border-radius: 50%;
@@ -281,99 +140,21 @@ body.light .footer {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    z-index: 1000;
-    transition: transform 0.3s ease;
 }
 
-.whatsapp-float:hover {
-    transform: scale(1.1);
-}
-.skills {
-    text-align: center;
-    margin: 80px 0;
-}
-
-.skills h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-.skill {
-    max-width: 500px;
-    margin: 20px auto;
-    text-align: left;
-}
-
-.skill span {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: bold;
-}
-
-.progress {
-    background-color: #1e293b;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    height: 10px;
-    border-radius: 10px;
-    animation: load 1.5s ease-in-out forwards;
-}
-
-/* Skill levels */
-.html { width: 90%; background-color: #38bdf8; }
-.css { width: 85%; background-color: #22c55e; }
-.js { width: 70%; background-color: #facc15; }
-.responsive { width: 80%; background-color: #a855f7; }
-
-@keyframes load {
-    from { width: 0; }
-}
-.resume-btn {
-    margin-top: 15px;
-    padding: 12px 25px;
-    border-radius: 8px;
-    background-color: #38bdf8;
-    color: #020617;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    display: inline-block;   /* 👈 IMPORTANT */
-}
-
-
-.resume-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
+/* TYPING */
 #typing {
     color: #38bdf8;
     border-right: 2px solid #38bdf8;
-    padding-right: 4px;
-    animation: blink 1s infinite;
 }
 
-@keyframes blink {
-    0%, 50% { border-color: transparent; }
-    100% { border-color: #38bdf8; }
-}
-.back-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    padding: 10px 16px;
-    background-color: #38bdf8;
-    color: #020617;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    z-index: 1000;
+/* LIGHT MODE */
+body.light {
+    background: white;
+    color: black;
 }
 
-.back-btn:hover {
-    opacity: 0.9;
+/* MOBILE */
+@media (max-width: 600px) {
+    h1 { font-size: 32px; }
 }
-
