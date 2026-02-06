@@ -1,13 +1,13 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
-    background-color: #0f172a;
-    color: white;
+    background: #0f172a;
+    color: #e5e7eb;
 }
 
 /* HERO */
@@ -18,93 +18,94 @@ body {
     align-items: center;
 }
 
-.container {
+.hero-box {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 700px;
+    padding: 20px;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.accent {
+    color: #38bdf8;
 }
 
 .tagline {
     color: #94a3b8;
-    margin: 15px 0 30px;
+    margin-bottom: 30px;
 }
 
 /* BUTTONS */
-.primary-btn,
-.secondary-btn,
-.theme-btn,
-.resume-btn {
-    margin: 8px;
-    padding: 12px 25px;
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
+    font-weight: 600;
 }
 
-.primary-btn {
-    background: white;
-    color: black;
-}
-
-.secondary-btn {
-    border: 2px solid white;
-    color: white;
-}
-
-.theme-btn {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-}
-
-.resume-btn {
+.primary {
     background: #38bdf8;
     color: #020617;
 }
 
-/* CONTACT */
-.contact-section {
-    display: flex;
-    justify-content: center;
-    margin: 80px 0;
+.outline {
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
 }
 
-.contact-form {
-    width: 320px;
+.resume {
+    background: #1e293b;
+    color: white;
+}
+
+/* CONTACT */
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 360px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact input,
+.contact textarea {
     margin: 8px 0;
     padding: 10px;
     border-radius: 6px;
     border: none;
 }
 
-.contact-form button {
+.contact button {
     margin-top: 10px;
-    background: #ff3366;
-    color: white;
-    border: none;
     padding: 12px;
+    background: #ff3366;
+    border: none;
     border-radius: 8px;
+    color: white;
+    font-weight: bold;
 }
 
 /* PROJECTS */
 .projects {
+    padding: 80px 20px;
     text-align: center;
-    margin: 80px 0;
 }
 
-.project-cards {
+.project-grid {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -119,42 +120,30 @@ h1 {
 }
 
 /* FOOTER */
-.footer {
+footer {
     text-align: center;
     padding: 20px;
     color: #94a3b8;
 }
 
 /* WHATSAPP */
-.whatsapp-float {
+.whatsapp {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    background: #25D366;
     width: 55px;
     height: 55px;
-    background: #25D366;
+    border-radius: 50%;
     color: white;
     font-size: 28px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
 }
 
-/* TYPING */
-#typing {
-    color: #38bdf8;
-    border-right: 2px solid #38bdf8;
-}
-
-/* LIGHT MODE */
-body.light {
-    background: white;
-    color: black;
-}
-
 /* MOBILE */
 @media (max-width: 600px) {
-    h1 { font-size: 32px; }
+    h1 { font-size: 34px; }
 }
