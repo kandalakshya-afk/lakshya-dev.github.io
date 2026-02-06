@@ -1,149 +1,134 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
-    background: #0f172a;
-    color: #e5e7eb;
+  background: #0b1220;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* LAYOUT */
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section.dark {
+  background: #020617;
 }
 
 /* HERO */
 .hero {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-.hero-box {
-    text-align: center;
-    max-width: 700px;
-    padding: 20px;
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 10px;
 }
 
-h1 {
-    font-size: 52px;
-    margin-bottom: 10px;
-}
-
-.accent {
-    color: #38bdf8;
-}
-
-.tagline {
-    color: #94a3b8;
-    margin-bottom: 30px;
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 30px;
 }
 
 /* BUTTONS */
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
+.btn-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .btn {
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .primary {
-    background: #38bdf8;
-    color: #020617;
+  background: #38bdf8;
+  color: #020617;
+}
+
+.ghost {
+  color: #38bdf8;
 }
 
 .outline {
-    border: 2px solid #38bdf8;
-    color: #38bdf8;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
 }
 
-.resume {
-    background: #1e293b;
-    color: white;
-}
-
-/* CONTACT */
-.contact {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.contact form {
-    max-width: 360px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact input,
-.contact textarea {
-    margin: 8px 0;
-    padding: 10px;
-    border-radius: 6px;
-    border: none;
-}
-
-.contact button {
-    margin-top: 10px;
-    padding: 12px;
-    background: #ff3366;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-}
-
-/* PROJECTS */
-.projects {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.project-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .card {
-    background: #1e293b;
-    padding: 20px;
-    width: 260px;
-    border-radius: 12px;
+  background: #020617;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+/* CONTACT */
+.contact-form {
+  max-width: 400px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
-    color: #94a3b8;
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
 }
 
 /* WHATSAPP */
 .whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    color: white;
-    font-size: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  color: white;
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
-    h1 { font-size: 34px; }
+  .hero h1 {
+    font-size: 34px;
+  }
 }
