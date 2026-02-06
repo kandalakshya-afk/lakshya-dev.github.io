@@ -1,79 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Lakshya | Frontend Web Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Lakshya | Frontend Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lakshya – Frontend Developer building clean, responsive websites using HTML & CSS." />
 
-    <!-- SEO -->
-    <meta name="description" content="Lakshya is a frontend web developer building clean, responsive websites using HTML, CSS, and JavaScript.">
-    <meta name="author" content="Lakshya">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Lakshya | Frontend Web Developer">
-    <meta property="og:description" content="Clean and responsive websites using HTML & CSS.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kandalakshya-afk.github.io/lakshya-dev.github.io/">
-    <meta property="og:image" content="preview.png">
-
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-box">
-        <h1>Hi, I’m <span class="accent">Lakshya</span> 👋</h1>
-        <p class="tagline">Frontend Developer • Student • Creator</p>
+  <div class="wrapper">
+    <h1>Hi, I’m Lakshya 👋</h1>
+    <p class="subtitle">Frontend Developer · Student · Creator</p>
 
-        <div class="hero-buttons">
-            <a href="#contact" class="btn primary">Contact Me</a>
-            <a href="about.html" class="btn outline">About Me</a>
-            <a href="Lakshya_Resume.pdf" class="btn resume" download>Download Resume</a>
-        </div>
+    <div class="btn-group">
+      <a href="#contact" class="btn primary">Contact Me</a>
+      <a href="about.html" class="btn ghost">About Me</a>
+      <a href="Lakshya_Resume.pdf" class="btn outline" download>Download Resume</a>
     </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-    <h2>Contact Me</h2>
-
-    <form action="https://formspree.io/f/xzbldqny" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+  </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="projects">
-    <h2>My Projects</h2>
+<section class="section">
+  <div class="wrapper">
+    <h2>Projects</h2>
 
-    <div class="project-grid">
-        <div class="card">
-            <h3>Personal Portfolio</h3>
-            <p>Modern responsive portfolio built with HTML & CSS.</p>
-        </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Personal Portfolio</h3>
+        <p>Responsive portfolio using HTML & CSS.</p>
+      </div>
 
-        <div class="card">
-            <h3>Multi-Page Website</h3>
-            <p>Website with navigation, animations, and contact form.</p>
-        </div>
+      <div class="card">
+        <h3>Multi Page Website</h3>
+        <p>Website with navigation and contact form.</p>
+      </div>
 
-        <div class="card">
-            <h3>Upcoming Project</h3>
-            <p>More projects coming soon 🚀</p>
-        </div>
+      <div class="card">
+        <h3>Upcoming Project</h3>
+        <p>More projects coming soon 🚀</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section dark">
+  <div class="wrapper">
+    <h2>Contact</h2>
+
+    <form class="contact-form" action="https://formspree.io/f/xzbldqny" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn primary">Send Message</button>
+    </form>
+  </div>
 </section>
 
 <!-- WHATSAPP -->
 <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp" target="_blank">💬</a>
 
 <footer>
-    © 2026 Lakshya • Built with HTML & CSS
+  © 2026 Lakshya
 </footer>
 
 </body>
