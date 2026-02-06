@@ -1,20 +1,201 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About Me</title>
+    <meta charset="UTF-8">
+    <title>Lakshya | Frontend Web Developer Portfolio</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO META TAGS -->
+    <meta name="description" content="Lakshya is a frontend web developer creating responsive websites using HTML, CSS, and JavaScript. Clean, modern, and mobile-friendly designs.">
+    <meta name="keywords" content="frontend developer, html css website, portfolio website, web developer india, responsive website">
+    <meta name="author" content="Lakshya">
+
+    <!-- Open Graph (for Fiverr, WhatsApp, LinkedIn preview) -->
+    <meta property="og:title" content="Lakshya | Frontend Web Developer">
+    <meta property="og:description" content="Responsive portfolio websites using HTML & CSS. Clean design, fast delivery.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kandalakshya-afk.github.io/lakshya-dev.github.io/">
+    <meta property="og:image" content="https://kandalakshya-afk.github.io/lakshya-dev.github.io/preview.png">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- HERO SECTION -->
+<section class="hero">
     <div class="container">
-        <h1>About Me</h1>
-        <p class="tagline">
-            Hi, I’m Lakshya. I’m a student learning web development and building real projects.
-        </p>
+        <h1>
+    Hi, I'm <span id="typing"></span> 👋
+</h1>
 
-        <button onclick="history.back()">Go Back</button>
+        <p class="tagline">Student | Future Developer | Creator</p>
+
+        <a href="#contact" class="primary-btn">Contact Me</a>
+        <a href="about.html" class="secondary-btn">About Me</a>
+        <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+<a href="Lakshya_Resume.pdf" class="resume-btn" download>
+    📄 Download Resume
+</a>
     </div>
+</section>
+
+
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+    <form action="https://formspree.io/f/xzbldqny" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section class="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-cards">
+        <div class="card">
+            <h3>Personal Portfolio</h3>
+            <p>A responsive portfolio website built using HTML & CSS.</p>
+        </div>
+
+        <div class="card">
+            <h3>Multi-Page Website</h3>
+            <p>Website with navigation, animations and contact form.</p>
+        </div>
+
+        <div class="card">
+            <h3>Upcoming Project</h3>
+            <p>More cool projects coming soon 🚀</p>
+        </div>
+    </div>
+</section>
+<section class="services">
+    <h2>My Services</h2>
+
+    <div class="service-cards">
+        <div class="service-card">
+            <h3>Portfolio Website</h3>
+            <p>Clean and responsive personal portfolio using HTML & CSS.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Landing Page</h3>
+            <p>Modern landing pages for products, startups, and creators.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Multi Page Website</h3>
+            <p>Simple multi-page websites with smooth navigation.</p>
+        </div>
+    </div>
+</section>
+<section class="testimonials">
+    <h2>What People Say</h2>
+
+    <div class="testimonial-cards">
+        <div class="testimonial">
+            <p>“Clean design and fast delivery. Very professional work.”</p>
+            <span>— Client</span>
+        </div>
+
+        <div class="testimonial">
+            <p>“Great communication and responsive website.”</p>
+            <span>— Happy User</span>
+        </div>
+    </div>
+</section>
+<section class="skills">
+    <h2>My Skills</h2>
+
+    <div class="skill">
+        <span>HTML</span>
+        <div class="progress">
+            <div class="progress-bar html"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <span>CSS</span>
+        <div class="progress">
+            <div class="progress-bar css"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <span>JavaScript</span>
+        <div class="progress">
+            <div class="progress-bar js"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <span>Responsive Design</span>
+        <div class="progress">
+            <div class="progress-bar responsive"></div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 Lakshya. Built with ❤️ using HTML & CSS.</p>
+</footer>
+
+<!-- DARK / LIGHT MODE SCRIPT -->
+<script>
+    const toggleBtn = document.getElementById("themeToggle");
+    const body = document.body;
+
+    // Load saved theme
+    if (localStorage.getItem("theme") === "light") {
+        body.classList.add("light");
+        toggleBtn.textContent = "☀️ Light Mode";
+    }
+
+    toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("light");
+
+        if (body.classList.contains("light")) {
+            toggleBtn.textContent = "☀️ Light Mode";
+            localStorage.setItem("theme", "light");
+        } else {
+            toggleBtn.textContent = "🌙 Dark Mode";
+            localStorage.setItem("theme", "dark");
+        }
+    });
+</script>
+<a
+  href="https://wa.me/918290176851"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  💬
+</a>
+<script>
+    const text = "Lakshya";
+    let index = 0;
+    const speed = 120; // typing speed
+
+    function typeEffect() {
+        if (index < text.length) {
+            document.getElementById("typing").textContent += text.charAt(index);
+            index++;
+            setTimeout(typeEffect, speed);
+        }
+    }
+
+    window.onload = typeEffect;
+</script>
 
 </body>
 </html>
+
+
