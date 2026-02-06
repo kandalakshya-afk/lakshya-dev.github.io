@@ -360,3 +360,20 @@ body.light .footer {
     0%, 50% { border-color: transparent; }
     100% { border-color: #38bdf8; }
 }
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 16px;
+    background-color: #38bdf8;
+    color: #020617;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.back-btn:hover {
+    opacity: 0.9;
+}
+
