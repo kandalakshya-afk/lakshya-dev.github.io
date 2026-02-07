@@ -351,3 +351,65 @@ body.light .hero-box {
   h1 { font-size: 34px; }
   .hero-box { padding: 40px 20px; }
 }
+section {
+    padding: 100px 20px;
+}
+.hero h1 {
+    font-size: 56px;
+    letter-spacing: -1px;
+}
+
+.hero .tagline {
+    font-size: 18px;
+    max-width: 520px;
+    line-height: 1.6;
+}
+.primary-btn {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #020617;
+    font-weight: 600;
+}
+
+.secondary-btn {
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-4px);
+}
+.contact-form {
+    background-color: #020617;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #020617;
+    color: white;
+    border: 1px solid #1e293b;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #94a3b8;
+}
+.card,
+.service-card,
+.testimonial {
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+section h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    letter-spacing: -0.5px;
+}
+.footer {
+    margin-top: 80px;
+    border-top: 1px solid #1e293b;
+}
+
